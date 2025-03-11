@@ -1,0 +1,73 @@
+#include<iostream>
+# include<string>
+using namespace std;
+class publication{
+	public:
+	string title;
+	float price;
+	void getdata(){
+		cout<<"enter title"<<endl;
+		cin>>title;
+		cout<<"enter price"<<endl;
+		cin>>price;
+		
+	}
+	void putdata(){
+		cout<<"parent class"<<endl;
+		cout<<"title:"<<title<<endl;
+		cout<<"price:"<<price<<endl;
+	}
+};
+//child1
+class book:public publication{
+	public:
+	int pagecount;
+	void getdata(){
+	cout<<"enter title"<<endl;
+		cin>>title;
+		cout<<"enter price"<<endl;
+		cin>>price;
+		cout<<"enter page count"<<endl;
+		cin>>pagecount;
+	}
+	void putdata(){
+		cout<<"child1"<<endl;
+		cout<<"title:"<<title<<endl;
+		cout<<"price:"<<price<<endl;
+		cout<<"pagecount"<<pagecount<<endl;
+	}
+};
+//child2)
+class tape:public publication{
+	public:
+	float playingtime;
+	void getdata(){
+		cout<<"enter title"<<endl;
+		cin>>title;
+		cout<<"enter price"<<endl;
+		cin>>price;
+		cout<<"enter playing time"<<endl;
+		cin>>playingtime;
+	}
+	void putdata(){
+		cout<<"child2"<<endl;
+		cout<<"title:"<<title<<endl;
+		cout<<"price:"<<price<<endl;
+		cout<<"playingtime:"<<playingtime<<endl;
+	}
+};
+int main(){
+	book b1;
+	b1.getdata();
+	b1.putdata();
+	tape t1;
+	t1.getdata();
+	t1.putdata();
+	return 0;
+}
+	
+	
+
+	
+	
+		
